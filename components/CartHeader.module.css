@@ -1,0 +1,86 @@
+.cart__header {
+  background-color: #f7f6f9;
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.header__section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__section input:focus {
+  outline: none;
+}
+
+.cart__input input[type="text"] {
+  border: 0;
+  background: transparent;
+  width: calc(100% - 50px);
+  padding-left: 20px;
+}
+.cart__button {
+  position: relative;
+}
+.cart__button button > img {
+  max-width: 30px;
+}
+.cart__button button {
+  border: 0;
+  background: none;
+  display: flex;
+  align-items: center;
+}
+
+.cart__button button > span {
+  width: 25px;
+  height: 25px;
+  background: #7447e8;
+  border-radius: 100%;
+  color: #fff;
+  line-height: 25px;
+  font-weight: bold;
+  margin-left: 6px;
+}
+
+.cart__button ul {
+  position: absolute;
+  right: 0;
+  min-width: 250px;
+  width: 100%;
+  list-style-type: none;
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+  padding: 20px;
+  box-shadow: 0 0 5px rgb(0 0 0 / 15%);
+}
+.none {
+  display: none;
+}
+
+.cart__input {
+  background: #fff;
+  height: 40px;
+  width: 100%;
+  flex: 0 0 33%;
+  max-width: 33%;
+  box-shadow: rgb(0 0 0 / 16%) 0px 1px 2px;
+  border-radius: 5px;
+  display: flex;
+  position: relative;
+}
+.cart__input img {
+  max-width: 25px;
+  object-fit: contain;
+  position: absolute;
+  right: 10px;
+  top: 6px;
+  transform: rotate(-90deg);
+}
+
+.dropDownsection {
+  background-color: #fff;
+}

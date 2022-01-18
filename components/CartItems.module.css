@@ -1,0 +1,18 @@
+.image__section {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.image__section > h2 {
+  font-size: 20px;
+  line-height: 20px;
+}
+.image__section > p {
+  padding: 10px 0;
+  line-height: 20px;
+}
+
+.image__section > div {
+  font-size: 24px;
+  font-weight: bold;
+}

@@ -1,0 +1,36 @@
+.cart__footer {
+  background-color: #f7f6f9;
+  padding: 15px 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  height: 70px;
+  box-sizing: border-box;
+}
+
+.footer__section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.cart__content {
+  flex: 0 0 70%;
+  max-width: 70%;
+  padding-left: 100px;
+  position: relative;
+  box-sizing: border-box;
+  text-align: right;
+}
+.cart__content > img {
+  max-width: 40px;
+}
+
+.cart__price,
+.cart__addtocart {
+  flex: 0 0 15%;
+  max-width: 15%;
+  align-self: center;
+  font-size: 20px;
+  font-weight: 700;
+}
