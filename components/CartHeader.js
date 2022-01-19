@@ -3,9 +3,10 @@ import Image from "next/image";
 import classes from "./CartHeader.module.css";
 import ShoppingCart from "../img/shopping-cart.png";
 import SearchCart from "../img/search.png";
-import CartItems from "./CartItems";
+import Link from "next/link";
 
 const CartHeader = (props) => {
+  console.log(props.cartItems);
   const inputHandler = (event) => {
     props.SetSearchProduct(event.target.value);
   };
@@ -19,36 +20,27 @@ const CartHeader = (props) => {
             <Image src={SearchCart} alt="search" width="25" height="25"></Image>
           </div>
           <div className={classes.cart__button}>
-            <button type="text">
-              <Image
-                src={ShoppingCart}
-                alt="shopping_cart"
-                width="30"
-                height="30"
-              />
-              <span className="count">{props.cartItems.items.length}</span>
-            </button>
-            <ul
+            <Link href={"/Cart/CardId"} passHref>
+              <button type="text">
+                <Image
+                  src={ShoppingCart}
+                  alt="shopping_cart"
+                  width="30"
+                  height="30"
+                />
+                <span className="count">{props.cartItems.length}</span>
+              </button>
+            </Link>
+            {/* <Cart onCart="aa"></Cart> */}
+            {/* <ul
               className={props.cartItems.items.length > 0 ? "" : classes.none}
             >
               <li>
                 <div className={classes.dropDownsection}>
-                  {props.cartItems.items.map((item) => {
-                    return props.cartItems.items.length > 0 ? (
-                      <CartItems
-                        key={item.id}
-                        title={item.title}
-                        desc={item.description}
-                        imgURL={item.imageUrl}
-                        price={item.price}
-                      ></CartItems>
-                    ) : (
-                      ""
-                    );
-                  })}
+                  <CartItem onCart={props.cartItems.items}></CartItem>
                 </div>
               </li>
-            </ul>
+            </ul> */}
           </div>
         </div>
       </div>

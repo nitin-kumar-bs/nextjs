@@ -1,34 +1,19 @@
-import React, { useEffect, useState, useReducer } from "react";
+import React, { useState } from "react";
 import classes from "./Carts.module.css";
 import CartListing from "./CartListing";
 import CartFooter from "./CartFooter";
 import CartHeader from "./CartHeader";
-import Loader from "./Loader";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 const Carts = (props) => {
-  const cartReducer = (state, action) => {
-    if (action.type == "ADD__ITEM") {
-      //   console.log(state.items);
-      return { ...state, items: [...state.items, action.item] };
-      //  const UpdatedArray = state.items.push(action.item);
-
-      // return UpdatedArray;
-    }
-    return { items: [] };
-  };
-
-  const [cartItems, setCartItems] = useReducer(cartReducer, { items: [] });
-
+  const cartItems = useSelector((state) => state.items);
+  const dispatch = useDispatch();
   const onAddHandler = (item) => {
-    setCartItems({ type: "ADD__ITEM", item: item });
+    dispatch({ type: "ADD__ITEM", item: item });
   };
-
-  // console.log(cartItems);
 
   const [searchData, setsearchData] = useState("");
-  // const [loader, setLoader] = useState(false);
-  // dispatchLoader({ type: "SET__LOADER" });
-  // setLoader(true);
 
   const getInputValue = (InputValue) => {
     setsearchData(InputValue);

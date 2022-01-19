@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import carts from "../components/Carts";
 import Carts from "../components/Carts";
 export default function Home(props) {
   return (
@@ -12,7 +11,6 @@ export default function Home(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div id="overlay__root"></div>
       <main className={styles.main}>
         <Carts listData={props.response}></Carts>
         {/* <h1 className={styles.title}>
